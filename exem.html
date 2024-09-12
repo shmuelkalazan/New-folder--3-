@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>exem</title>
-    <link rel="stylesheet" href="exem.css">
+    <link rel="stylesheet" href="exem.css" />
     <script src="./exem.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="top">
+      <div class="top_titel">
+        <h2 class="top_header">batelian force managment</h2>
+        <hr class="top_header line" />
+        <!-- <hr> -->
+      </div>
+      <div class="top_main">
+        <div class="add_person">
+          <div class="inputs">
+            <input class="input1 full_name" type="text" placeholder="full name" />
+            <input class="input1 renk" type="text" placeholder="renk" />
+            <input class="input1 position" type="text" placeholder="position" />
+            <input class="input1 platoon" type="text" placeholder="platoon" />
+            <input class="input1 mission_time" type="text" placeholder="mission time (secends)" />
+          </div>
+          <div class="top_main_buttons">
+            <select class="select_top_main" name="ststus" id="">
+              <option value="Active">Active</option>
+              <option value="Retired">Retired</option>
+              <option value="Reserve">Reserve</option>
+            </select>
+            <button class="add_person_button">add person</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="down_main">
+      <div class="down_main_title top_titel2">
+        <h2 class="top_header2">force overwiew</h2>
+        <hr class="top_header2 line2" />
+    </div>
+      <div class="the_tabel">
+        <table>
+            <tr>
+                <th class="full_name_hedear">full name</th>
+                <th>renk</th>
+                <th>position</th>
+                <th>platoon</th>
+                <th>status</th>
+                <th>actions</th>                
+            </tr>
+            <div class="list_persons">
+
+            </div>
+
+            <!-- <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    </tr>
+                    <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    </tr>
+                    <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                    </tr>
+                    <tr>
+                    <td>Island Trading</td>
+                    <td>Helen Bennett</td>
+                    <td>UK</td>
+                    </tr>
+                    <tr>
+                    <td>Laughing Bacchus Winecellars</td>
+                    <td>Yoshi Tannamuri</td>
+                    <td>Canada</td>
+                    </tr>
+                    <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Giovanni Rovelli</td>
+                    <td>Italy</td>
+                    </tr> -->
+        </table>
+        </div>
+    </div>
+  </body>
 </html>
