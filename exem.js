@@ -1,4 +1,4 @@
-//let allPesrons = []
+let allPesrons = []
 const table = document.querySelector("table")
 const full_name = document.querySelector(".full_name")
 const renk = document.querySelector(".renk")
@@ -11,12 +11,25 @@ const list_persons = document.querySelector("list_persons")
 const add_person_button = document.querySelector(".add_person_button")
 add_person_button.addEventListener("click",ToAddPerson)
 
+
+
+let isSort = true
 function DisplayAllPersons(){
-    const refresh = document.querySelectorAll("list_persons")
-    refresh.innerHTML =""
-    let persons = loadPersons()
-    for(let person of persons) {   
-        DisplayOnePerson(person)    
+    const allSoldiers =  loadPersons()
+    // allSoldiers.sort((a, b) => a.full_name.localeCompare(b.full_name));
+    // console.log(allSoldiers);  
+    // alert(allSoldiers)  
+    // if (isSort == true)
+    // {
+    //     allSoldiers.reverse()
+    //     isSort = false
+    // }
+    // else{ isSort = true }   
+    // persons.sort( compare );
+    // savePerson(allSoldiers)
+    // alert(allSoldiers)
+    for(let soldier of allSoldiers) {   
+        DisplayOnePerson(soldier)    
     } 
 }
 
@@ -110,5 +123,8 @@ function removePerson(id)
     //location.reload();
 
 }
-
-
+// function refresh1(){
+//     const refresh = document.querySelectorAll("td")
+//     refresh.innerHTML =""
+// }
+// document.onload(refresh1)
