@@ -1,3 +1,4 @@
+
 let allPesrons = []
 const table = document.querySelector("table")
 const full_name = document.querySelector(".full_name")
@@ -15,6 +16,7 @@ add_person_button.addEventListener("click",ToAddPerson)
 
 let isSort = true
 function DisplayAllPersons(){
+    
     const allSoldiers =  loadPersons()
     // allSoldiers.sort((a, b) => a.full_name.localeCompare(b.full_name));
     // console.log(allSoldiers);  
@@ -27,7 +29,7 @@ function DisplayAllPersons(){
     // else{ isSort = true }   
     // persons.sort( compare );
     // savePerson(allSoldiers)
-    // alert(allSoldiers)
+    //alert(allSoldiers)
     for(let soldier of allSoldiers) {   
         DisplayOnePerson(soldier)    
     } 
@@ -59,6 +61,8 @@ function DisplayOnePerson(person){
     missionBut.setAttribute("class" ,"in_action_button")
     const editBut = document.createElement("button")
     editBut.textContent = "edit"
+    removeBut.addEventListener("click" ,()=>moveToEdit(person))
+
     editBut.setAttribute("class" ,"in_action_button")
 
     action.appendChild(removeBut)
@@ -122,6 +126,9 @@ function removePerson(id)
     DisplayAllPersons()
     //location.reload();
 
+}
+function moveToEdit(person){
+    
 }
 // function refresh1(){
 //     const refresh = document.querySelectorAll("td")
