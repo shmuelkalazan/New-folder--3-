@@ -16,19 +16,20 @@ add_person_button.addEventListener("click",ToAddPerson)
 
 let isSort = true
 function DisplayAllPersons(){
-    
+
     const allSoldiers =  loadPersons()
-    // allSoldiers.sort((a, b) => a.full_name.localeCompare(b.full_name));
-    // console.log(allSoldiers);  
-    // alert(allSoldiers)  
-    // if (isSort == true)
-    // {
-    //     allSoldiers.reverse()
-    //     isSort = false
-    // }
-    // else{ isSort = true }   
-    // persons.sort( compare );
-    // savePerson(allSoldiers)
+    allSoldiers.sort((a, b) => a.full_name.localeCompare(b.full_name));
+    console.log(allSoldiers);  
+    //alert(allSoldiers)  
+    if (isSort == true)
+    {
+        allSoldiers.reverse()
+        isSort = false
+    }
+    else{ isSort = true }   
+    // allSoldiers.sort( compare );
+    savePerson(allSoldiers)
+    table.innerHTML = ""
     //alert(allSoldiers)
     for(let soldier of allSoldiers) {   
         DisplayOnePerson(soldier)    
